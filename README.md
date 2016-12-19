@@ -1,7 +1,10 @@
 # GPACalc
 
 ##Decription:
-GPACalc is Python script which calculates the user's term or cumulative GPA on a scale of 0 to 4. To run the script, it is required that you have Python installed. On Linux, Python may already be part of your distribution or may be available as a package. For Windows and Mac OS, please refer to the Python download page for installers and instructions. The pipeline has been tested with Python 2.7, but it might also work with later versions of Python such as 3.5.
+_GPACalc_ is Python script which allows the user to calculate their term or cumulative GPA on a scale of 0 to 4. The script is geared towards college students but its code can easily be modified to include high school students as well. 
+
+###Dependencies:
+The script requires that you have Python 2.7 installed. On Linux, Python may already be part of your distribution or may be available as a package. For Windows and Mac OS, please refer to the Python download page for installers and instructions.
 
 ##How to Run:
 Simply download the script and invoke the Python interpreter in your terminal or command prompt manually as follows:
