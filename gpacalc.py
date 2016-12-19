@@ -245,35 +245,14 @@ def deleteTerm(userInput):
         print ("The term  " + userInput + " doesn't appear to be in the list.")
     getUserInput()
     
-'''
-This method displays instructions.
-@return: void 
-'''
-def displayHelp():
-    print ("--------------------------------------------------------------------------------------------------")
-    print ("Thank you for using Yazin's GPA Calculator. Please start by adding a term.\n")
-    print ("General/Term options -- To:")
-    print ("  - Add a term, type 'add <term name>'")
-    print ("  - Delete a term, type 'del <term name>'")
-    print ("  - Clear your list of terms, type '[c]lear'")
-    print ("  - Calculate your cumulative GPA, type '[g]pa'")
-    print ("  - Exit a term (i.e. go back), type '[b]ack'")
-    print ("  - Go to a term that's already been added, type 'go <term name>'")
-    print ("  - Exit the program at any moment, type '[e]xit' or press Ctrl+C\n")
-    print ("Course options -- To:")
-    print ("  - Add a course, type 'add <course name>, <letter grade>, <number of units>'")
-    print ("  - Delete a course, type '[d]el <course name>'")
-    print ("  - To output your list of courses, type '[l]ist'")
-    print ("  - To clear your list of courses, type '[c]lear'")
-    print ("  - Calculate your term GPA, type '[g]pa'")
-    print ("--------------------------------------------------------------------------------------------------\n")
 
 '''
 Python's equivalent of Java's main.
 @return: void 
 '''
 def init():
-    displayHelp()
+    print ("Thank you for using GPACalc. Please start by adding a term.")
+    print ("For help, please refer to the README file on GitHub: https://github.com/yazin-yousif/GPACalc/" + "\n")
     getUserInput()
 
 init()
