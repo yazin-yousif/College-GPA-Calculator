@@ -16,9 +16,9 @@ Upon success, GPACalc will prompt you for input.
 After being prompted for input, please start by adding a term. To add a term, input **add \<term name\>**. Upon success, you'll get taken to that term instance where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
 
 **General/Term Options:**
-* To add a term, type `add <term name>`.
-* To delete a term, type `del <term name>`.
-* To go to a term, type `go <term name>`.
+* To add a term, type `add <term name>`
+* To delete a term, type `del <term name>`
+* To go to a term, type `go <term name>`
 * To calculate the GPA for a term, type `[g]pa`
 * To calculate the cumulative GPA, exit the term instance and type `[g]pa`
 * To view your list of terms, type `[l]ist`
