@@ -34,3 +34,14 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To Exit the program, type `[e]xit`
 
 Please note that none of the commands listed above are case sensitive; however, it's impertive that you follow the proper formatting when providing the script with your input.
+
+##Frequently Asked Questions: 
+
+Q: **Is there a limit to the number of terms or courses I can add?**
+A: No, you can add many terms and courses as you want.
+
+Q: **Do P/NP (Pass/No Pass) courses are factored in?**
+A: No, P/NP courses are not factored in your GPA.
+
+Q: **Do I (Incompletes) and W (Withdrawals) receive grade points?**
+A: No. I and W do not receive grade points and do not have an effect on your GPA.
