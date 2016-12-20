@@ -13,7 +13,7 @@ Simply download the script and invoke the Python interpreter in your terminal or
 Upon success, GPACalc will prompt you for input.
 
 ##How to Use:
-After being prompted for input, please start by adding a term. To add a term, input **add \<term name\>**. Upon success, you'll get taken to that term instance where you can add courses and calculate the GPA for that term. To exit a term, input **[b]back**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
+After being prompted for input, please start by adding a term. To add a term, input **add \<term name\>**. Upon success, you'll get taken to that term instance where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
 
 **General/Term Options:**
 * To add a term, type `add <term name>`.
