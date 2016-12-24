@@ -1,0 +1,27 @@
+# Lines that start with a '#' are comments and will be ignored.
+# This file contains sample term and course information.
+# Your file must be formatted as follows:
+
+# Term: <term name>
+# <course name>, <letter grade>, <number of units>
+# ....
+# <course name>, <letter grade>, <number of units>
+
+# Repeat this for as many terms and courses as you desire.
+
+# Sample information:
+
+Term: Spring 2016
+CSE 101, C+, 4
+ENG 100D, A, 4
+CSE 141, B-, 4
+
+Term: Fall 2016
+CSE 103, A-, 4
+CSE 190, A, 4
+CSE 180, B, 4
+
+Term: Winter 2015
+CSE 105, B-, 4
+CSE 110, B+, 4
+Math 183, C+, 4
