@@ -15,7 +15,11 @@ Upon success, GPACalc will prompt you for input.
 ##How to Use:
 After being prompted for input, please start by adding a term. To add a term, input **add \<term name\>**. Upon success, you'll get taken to that term instance where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
 
-**General/Term Options:**
+**General Options**
+* To import term and course information from a file, type `import <path>`. For proper file formatting, please refer to **sample.txt**.
+* To exit the program, type `[e]xit`
+
+**Term Options:**
 * To add a term, type `add <term name>`
 * To delete a term, type `del <term name>`
 * To go to a term, type `go <term name>`
@@ -23,7 +27,6 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To calculate the cumulative GPA, exit the term instance and type `[g]pa`
 * To view your list of terms, type `[l]ist`
 * To clear your list of terms, type `[c]lear`
-* To exit the program, type `[e]xit`
 
 **Course Options:**
 * To add a course, type `add <course name>, <letter grade>, <number of units>`
@@ -38,10 +41,10 @@ Please note that none of the commands listed above are case sensitive; however, 
 ##Frequently Asked Questions: 
 
 Q: **Is there a limit to the number of terms or courses I can add?**
-A: No, you can add many terms and courses as you want.
+* A: No. You can add many terms and courses as you want.
 
 Q: **Do P/NP (Pass/No Pass) courses are factored in?**
-A: No, P/NP courses are not factored in your GPA.
+* A: No. P/NP courses are not factored in your GPA.
 
 Q: **Do I (Incompletes) and W (Withdrawals) receive grade points?**
-A: No. I and W do not receive grade points and do not have an effect on your GPA.
+* A: No. I and W do not receive grade points and do not have an effect on your GPA.
