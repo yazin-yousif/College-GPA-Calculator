@@ -264,19 +264,20 @@ def importInfo(source):
     try:   
         with open(source) as file:
             for line in file:
-                if line.upper().startswith("TERM:"):
-                    termName = sup(line.split(":")[1])
-                    addTerm(termName, True)
-                    termAdded = True
-                elif (termAdded):
-                    courseInfo = sup(line)
-                    if courseInfo != "" and len(courseInfo) > 0:
-                        listOfTerms[termName].validateCourseInfo(courseInfo, True)
+                if sup(line).startswith("#") == False:
+                    if line.upper().startswith("TERM:"):
+                        termName = sup(line.split(":")[1])
+                        addTerm(termName, True)
+                        termAdded = True
+                    elif (termAdded):
+                        courseInfo = sup(line)
+                        if courseInfo != "" and len(courseInfo) > 0:
+                            listOfTerms[termName].validateCourseInfo(courseInfo, True)
+                        else:
+                            pass
                     else:
-                        pass
-                else:
-                    termAdded = False
-                    termName = ""
+                        termAdded = False
+                        termName = ""
         print("Your term and course information have been imported successfully.")
     except IOError:
         print ("ERROR: Unable to open file! Please make sure the file exists and you have access to it.")
