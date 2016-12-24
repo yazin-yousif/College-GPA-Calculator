@@ -3,11 +3,12 @@ import sys
 Created on Dec 19, 2016
 @author: Yazin Yousif
 '''
+from lib2to3.fixer_util import FromImport
 
 validGrades = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D', 'F', 'W', 'P', 'NP', 'I']
 gradeBreakdown = {'A+': 1, 'A':1, 'A-':0.925, 'B+':0.825, 'B':0.75, 'B-':0.675, 'C+':0.575, 'C':0.5, 'C-':0.425, 'D':0.25, 'F':0}
 
-'''
+''' 
 This class contains all the methods related to a term.
 '''
 class Term:
@@ -40,7 +41,7 @@ class Term:
     @param userInput: the user input.
     @return: void.
     '''
-    def validateCourseInfo(self, userInput):
+    def validateCourseInfo(self, userInput, fromImport):
    
         if len(userInput.split(',')) != 3:
             print "ERROR: Invalid input... Please try again: "
@@ -55,7 +56,9 @@ class Term:
                         self.__courses.append([x.strip() for x in userInput.split(',')])
             else:
                 print "ERROR: You've entered an invalid letter grade: " + letterGrade + " - Please try again."
-        self.getUserInput(self.__name)
+        
+        if fromImport == False:
+            self.getUserInput(self.__name)
 
     '''
     This method checks if the course being added is already in the list.
@@ -65,7 +68,7 @@ class Term:
     def isDuplicate(self, name):
         for course in (self.__courses):
             if sup(name) in course:
-                print ("ERROR: This course is already in the list.")
+                print ("ERROR: " + str(name) + " is already in the list.")
                 return True
         return False
 
@@ -117,7 +120,7 @@ class Term:
         userInput = raw_input(str(termName) + " > ")
         userInput = sup(userInput)
         if userInput.startswith("ADD "):
-            return self.validateCourseInfo(userInput[4:])
+            return self.validateCourseInfo(userInput[4:], False)
         elif userInput == "GPA" or userInput == "G":
             print "Your " + termName + " GPA is " + str(self.calculateGPA())
         elif userInput == "LIST" or userInput == "L":
@@ -153,11 +156,13 @@ def getUserInput():
     userInput = raw_input("> ")
     userInput = sup(userInput)
     if userInput.startswith("ADD "):
-        return addTerm(userInput[4:])
+        return addTerm(userInput[4:], False)
     elif userInput.startswith("GO "):
         return openTerm(userInput[3:])
     elif userInput.startswith("DEL "):
         return deleteTerm(userInput[4:])
+    elif userInput.startswith("IMPORT "):
+        return importInfo(userInput[7:])
     elif userInput == "CLEAR" or userInput == "C":
         collectGarbage(False)
     elif userInput == "LIST" or userInput == "L":
@@ -212,13 +217,15 @@ This method adds a term to the list of terms.
 @param userInput: contains the term name.
 @return: void 
 '''
-def addTerm(userInput):
+def addTerm(userInput, fromImport):
     if userInput not in listOfTerms:
         listOfTerms[userInput] = Term(userInput)
-        listOfTerms[userInput].getUserInput(listOfTerms[userInput].getName())
+        if (fromImport == False):
+            listOfTerms[userInput].getUserInput(listOfTerms[userInput].getName())
     else:
-        print ("ERROR: the term " + str(userInput) + " is already in the list. Please try again.")
-        getUserInput()
+        print ("ERROR: the term " + str(userInput) + " is already in the list.")
+        if (fromImport == False):
+            getUserInput()
 
 '''
 This method opens a term that's already been added to the list of terms.
@@ -245,11 +252,42 @@ def deleteTerm(userInput):
         print ("The term  " + userInput + " doesn't appear to be in the list.")
     getUserInput()
     
-
+'''
+This method allows the user to import their term and course information from a file
+@param: source: the path to a file containing the information.
+@return: void
+'''
+def importInfo(source):
+    
+    termAdded = False
+    termName = ""
+    try:   
+        with open(source) as file:
+            for line in file:
+                if line.upper().startswith("TERM:"):
+                    termName = sup(line.split(":")[1])
+                    addTerm(termName, True)
+                    termAdded = True
+                elif (termAdded):
+                    courseInfo = sup(line)
+                    if courseInfo != "" and len(courseInfo) > 0:
+                        listOfTerms[termName].validateCourseInfo(courseInfo, True)
+                    else:
+                        pass
+                else:
+                    termAdded = False
+                    termName = ""
+        print("Your term and course information have been imported successfully.")
+    except IOError:
+        print ("ERROR: Unable to open file! Please make sure the file exists and you have access to it.")
+    
+    finally:
+        getUserInput()
+      
 '''
 Python's equivalent of Java's main.
 @return: void 
-'''
+'''      
 def init():
     print ("Thank you for using GPACalc. Please start by adding a term.")
     print ("For help, please refer to the README file on GitHub: https://github.com/yazin-yousif/GPACalc/" + "\n")
