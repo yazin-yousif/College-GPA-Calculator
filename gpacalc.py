@@ -3,7 +3,6 @@ import sys
 Created on Dec 19, 2016
 @author: Yazin Yousif
 '''
-from lib2to3.fixer_util import FromImport
 
 validGrades = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D', 'F', 'W', 'P', 'NP', 'I']
 gradeBreakdown = {'A+': 1, 'A':1, 'A-':0.925, 'B+':0.825, 'B':0.75, 'B-':0.675, 'C+':0.575, 'C':0.5, 'C-':0.425, 'D':0.25, 'F':0}
@@ -262,8 +261,8 @@ def importInfo(source):
     termAdded = False
     termName = ""
     try:   
-        with open(source) as file:
-            for line in file:
+        with open(source) as importedFile:
+            for line in importedFile:
                 if sup(line).startswith("#") == False:
                     if line.upper().startswith("TERM:"):
                         termName = sup(line.split(":")[1])
