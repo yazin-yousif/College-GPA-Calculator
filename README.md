@@ -11,10 +11,10 @@ The script requires that you have Python 2.7 installed. On Linux, Python may alr
 Simply download the script and invoke the Python interpreter in your terminal or command prompt manually as follows:
 **`python gpacalc.py`**
 
-Upon success, GPACalc will prompt you for input.
+Upon success, GPACalc will take you to the main instance where you will be prompted for input.
 
 ##How to Use:
-After being prompted for input, please start by adding a term. To add a term, input **add \<term name\>**. Upon success, you'll get taken to that term's instance (**term name >**) where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
+After being prompted for input, please start by adding a term. To add a term, type **add \<term name\>**. Upon success, you'll get taken to that term's instance (**term name >**) where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
 
 
 **General Commands**
@@ -26,19 +26,19 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To exit the program, type `[e]xit`
 
 **Term Commands:**
-* To add a term, in the main instance, type `add <term name>`
-* To calculate the GPA for a term, in that term's instance, type `[g]pa`
-* To delete a term, in the main instance, type `del <term name>`
-* To go to a term, in the main instance, type `go <term name>`
-* To calculate the cumulative GPA, in the main instance, type `[g]pa`
-* To view your list of terms, in the main instance, type `[l]ist`
-* To clear your list of terms, in the main instance, and type `[c]lear`
+* To add a term, in the main instance, input `add <term name>`
+* To calculate the GPA for a term, in that term's instance, input `[g]pa`
+* To delete a term, in the main instance, input `del <term name>`
+* To go to a term, in the main instance, input `go <term name>`
+* To calculate the cumulative GPA, in the main instance, input `[g]pa`
+* To view your list of terms, in the main instance, input `[l]ist`
+* To clear your list of terms, in the main instance, and input `[c]lear`
 
 **Course Commands:** (requires being in a term instance)
-* To add a course, type `add <course name>, <letter grade>, <number of units>`
-* To delete a course, type `del <course name>`
-* To view your list of courses, type `[l]ist`
-* To clear your list of courses, type `[c]lear`
+* To add a course, input `add <course name>, <letter grade>, <number of units>`
+* To delete a course, input `del <course name>`
+* To view your list of courses, input `[l]ist`
+* To clear your list of courses, input `[c]lear`
 
 Please note that none of the commands listed above are case sensitive; however, it's impertive that you follow the proper formatting when providing the script with your input.
 
