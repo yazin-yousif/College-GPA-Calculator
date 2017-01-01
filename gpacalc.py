@@ -292,7 +292,7 @@ This method allows the user to export their term and course information.
 '''
 def exportInfo(path):
     if len(listOfTerms) == 0:
-        print "ERROR: There is no data to import."
+        print "ERROR: There is no data to export."
         getUserInput()
     try:
         output = open(path, 'w+')
