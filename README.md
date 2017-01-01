@@ -17,7 +17,7 @@ Upon success, GPACalc will prompt you for input.
 After being prompted for input, please start by adding a term. To add a term, input **add \<term name\>**. Upon success, you'll get taken to that term's instance (**term name >**) where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
 
 
-**General Options**
+**General Commands**
 
 ![logo](http://i.snag.gy/3F75G.jpg) **ATTENTION**: `import` and `export` won't work unless you are in the main instance of GPACalc (i.e. not in a term instance). 
 
@@ -25,7 +25,7 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To export term and course information to a file, type `export <path>`. The exported file will have the same file structure as that required by the `import` command. 
 * To exit the program, type `[e]xit`
 
-**Term Options:** (requires being in the main instance)
+**Term Commands:** (requires being in the main instance)
 * To add a term, type `add <term name>`
 * To delete a term, type `del <term name>`
 * To go to a term, type `go <term name>`
@@ -34,7 +34,7 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To view your list of terms, type `[l]ist`
 * To clear your list of terms, type `[c]lear`
 
-**Course Options:** (requires being in the term instance)
+**Course Commands:** (requires being in the term instance)
 * To add a course, type `add <course name>, <letter grade>, <number of units>`
 * To delete a course, type `del <course name>`
 * To view your list of courses, type `[l]ist`
