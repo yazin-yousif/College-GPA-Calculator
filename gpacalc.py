@@ -162,6 +162,8 @@ def getUserInput():
         return deleteTerm(userInput[4:])
     elif userInput.startswith("IMPORT "):
         return importInfo(userInput[7:])
+    elif userInput.startswith("EXPORT "):
+        return exportInfo(userInput[7:])
     elif userInput == "CLEAR" or userInput == "C":
         collectGarbage(False)
     elif userInput == "LIST" or userInput == "L":
@@ -257,11 +259,10 @@ This method allows the user to import their term and course information from a f
 @return: void
 '''
 def importInfo(source):
-    
     termAdded = False
     termName = ""
     try:   
-        with open(source) as importedFile:
+        with open(source, 'r') as importedFile:
             for line in importedFile:
                 if sup(line).startswith("#") == False:
                     if line.upper().startswith("TERM:"):
@@ -278,12 +279,36 @@ def importInfo(source):
                         termAdded = False
                         termName = ""
         print("Your term and course information have been imported successfully.")
-    except IOError:
-        print ("ERROR: Unable to open file! Please make sure the file exists and you have access to it.")
+    except IOError as err:
+        print ("ERROR: Unable import information -- " + str(err))
     
     finally:
         getUserInput()
-      
+
+'''
+This method allows the user to export their term and course information.
+@param: source: the path to a file containing the information.
+@return: void
+'''
+def exportInfo(path):
+    if len(listOfTerms) == 0:
+        print "ERROR: There is no data to import."
+        getUserInput()
+    try:
+        output = open(path, 'w+')
+        output.write("# This file was generated using GPACalc: https://github.com/yazin-yousif/GPACalc" + '\n\n')
+        for term in listOfTerms.itervalues():
+            output.write("Term: " + term.getName() + '\n')
+            for course in term.getCourses():
+                output.write(str(course).strip("\\[\\]").replace("'", "") + '\n')
+            output.write('\n')
+        print "Your term and course information have been imported successfully!"
+        output.close()
+    except IOError as err:
+        print("ERROR: Unable to import information -- " + str(err))
+    finally:
+        getUserInput()
+        
 '''
 Python's equivalent of Java's main.
 @return: void 
