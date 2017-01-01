@@ -25,22 +25,20 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To export your information to a file, type `export <path to file>`. The exported file will have the same file structure as that required by the `import` command. 
 * To exit the program, type `[e]xit`
 
-**Term Commands:** (requires being in the main instance)
-* To add a term, type `add <term name>`
-* To delete a term, type `del <term name>`
-* To go to a term, type `go <term name>`
-* To calculate the GPA for a term, type `[g]pa`
-* To calculate the cumulative GPA, exit the term instance and type `[g]pa`
-* To view your list of terms, type `[l]ist`
-* To clear your list of terms, type `[c]lear`
+**Term Commands:**
+* To add a term, in the main instance, type `add <term name>`
+* To calculate the GPA for a term, in that term's instance, type `[g]pa`
+* To delete a term, in the main instance, type `del <term name>`
+* To go to a term, in the main instance, type `go <term name>`
+* To calculate the cumulative GPA, in the main instance, type `[g]pa`
+* To view your list of terms, in the main instance, type `[l]ist`
+* To clear your list of terms, in the main instance, and type `[c]lear`
 
 **Course Commands:** (requires being in a term instance)
 * To add a course, type `add <course name>, <letter grade>, <number of units>`
 * To delete a course, type `del <course name>`
 * To view your list of courses, type `[l]ist`
 * To clear your list of courses, type `[c]lear`
-* To calculate your GPA, type `[g]pa`
-* To Exit the program, type `[e]xit`
 
 Please note that none of the commands listed above are case sensitive; however, it's impertive that you follow the proper formatting when providing the script with your input.
 
