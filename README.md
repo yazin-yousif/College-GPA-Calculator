@@ -25,7 +25,7 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To export term and course information to a file, type `export <path>`. The exported file will have the same file structure as that required by the `import` command. 
 * To exit the program, type `[e]xit`
 
-**Term Options:**
+**Term Options:** (requires being in the main instance)
 * To add a term, type `add <term name>`
 * To delete a term, type `del <term name>`
 * To go to a term, type `go <term name>`
@@ -34,7 +34,7 @@ After being prompted for input, please start by adding a term. To add a term, in
 * To view your list of terms, type `[l]ist`
 * To clear your list of terms, type `[c]lear`
 
-**Course Options:**
+**Course Options:** (requires being in the term instance)
 * To add a course, type `add <course name>, <letter grade>, <number of units>`
 * To delete a course, type `del <course name>`
 * To view your list of courses, type `[l]ist`
