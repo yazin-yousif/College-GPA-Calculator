@@ -1,5 +1,7 @@
 # GPACalc
 
+![screenshot](http://i.imgur.com/KKndqL1.png)
+
 ##Description:
 _GPACalc_ is Python script which allows the user to calculate their term or cumulative GPA on a scale of 0 to 4. 
 The script is geared towards college students.
