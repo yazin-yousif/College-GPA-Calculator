@@ -1,6 +1,6 @@
 # College GPA Calculator
 
-![screenshot](http://i.imgur.com/tqIFhfS.png)
+![screenshot](http://i.imgur.com/Iakow9M.png)
 
 ##Description:
 _College GPA Calculator_ is Python script which allows the user to calculate their term or cumulative GPA on a scale of 0 to 4. 
