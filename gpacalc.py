@@ -296,7 +296,7 @@ def exportInfo(path):
         getUserInput()
     try:
         output = open(path, 'w+')
-        output.write("# This file was generated using GPACalc: https://github.com/yazin-yousif/GPACalc" + '\n\n')
+        output.write("# This file was generated using College GPA Calculator -- https://github.com/yazin-yousif/College-GPA-Calculator" + '\n\n')
         for term in listOfTerms.itervalues():
             output.write("Term: " + term.getName() + '\n')
             for course in term.getCourses():
@@ -315,7 +315,7 @@ Python's equivalent of Java's main.
 '''      
 def init():
     print ("Thank you for using GPACalc. Please start by adding a term.")
-    print ("For help, please refer to the README file on GitHub: https://github.com/yazin-yousif/GPACalc/" + "\n")
+    print ("For help, please refer to the README file on GitHub: https://github.com/yazin-yousif/College-GPA-Calculator/" + "\n")
     getUserInput()
 
 init()
