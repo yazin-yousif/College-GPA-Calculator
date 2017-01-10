@@ -1,9 +1,9 @@
-# GPACalc
+# College GPA Calculator
 
-![screenshot](http://i.imgur.com/KKndqL1.png)
+![screenshot](http://i.imgur.com/tqIFhfS.png)
 
 ##Description:
-_GPACalc_ is Python script which allows the user to calculate their term or cumulative GPA on a scale of 0 to 4. 
+_College GPA Calculator_ is Python script which allows the user to calculate their term or cumulative GPA on a scale of 0 to 4. 
 The script is geared towards college students.
 
 ###Dependencies:
@@ -13,15 +13,15 @@ The script requires that you have Python 2.7 installed. On Linux, Python may alr
 Simply download the script and invoke the Python interpreter in your terminal or command prompt manually as follows:
 **`python gpacalc.py`**
 
-Upon success, GPACalc will take you to the main instance where you will be prompted for input.
+Upon success, _College GPA Calculator_ will take you to the main instance where you will be prompted for input.
 
 ##How to Use:
-After being prompted for input, please start by adding a term. To add a term, type **add \<term name\>**. Upon success, you'll get taken to that term's instance (**term name >**) where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that GPACalc supports:
+After being prompted for input, please start by adding a term. To add a term, type **add \<term name\>**. Upon success, you'll get taken to that term's instance (**term name >**) where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that _College GPA Calculator_ supports:
 
 
 **General Commands**
 
-![logo](http://i.snag.gy/3F75G.jpg) **ATTENTION**: `import` and `export` won't work unless you are in the main instance of GPACalc (i.e. not in a term instance). 
+![logo](http://i.snag.gy/3F75G.jpg) **ATTENTION**: `import` and `export` won't work unless you are in the main instance of _College GPA Calculator_ (i.e. not in a term instance). 
 
 * To import your information from a file, type `import <path to file>`. For proper file structure, please refer to **sample.txt**.
 * To export your information to a file, type `export <path to file>`. The exported file will have the same file structure as that required by the `import` command. 
