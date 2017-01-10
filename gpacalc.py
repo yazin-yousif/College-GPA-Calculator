@@ -4,9 +4,10 @@ Created on Dec 19, 2016
 @author: Yazin Yousif
 '''
 
-validGrades = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D', 'F', 'W', 'P', 'NP', 'I']
-gradeBreakdown = {'A+': 1, 'A':1, 'A-':0.925, 'B+':0.825, 'B':0.75, 'B-':0.675, 'C+':0.575, 'C':0.5, 'C-':0.425, 'D':0.25, 'F':0}
-
+validGrades = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 
+               'C', 'C-', 'D', 'F', 'W', 'P', 'NP', 'I']
+gradeBreakdown = {'A+': 1, 'A':1, 'A-':0.925, 'B+':0.825, 'B':0.75, 
+                  'B-':0.675, 'C+':0.575, 'C':0.5, 'C-':0.425, 'D':0.25, 'F':0}
 ''' 
 This class contains all the methods related to a term.
 '''
