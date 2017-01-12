@@ -310,13 +310,7 @@ def exportInfo(path):
     finally:
         getUserInput()
         
-'''
-Python's equivalent of Java's main.
-@return: void 
-'''      
-def init():
+if __name__ == "__main__":
     print ("Thank you for using College GPA Calculator by Yazin Yousif. Please start by adding a term.")
     print ("For help, please refer to the README file on GitHub: https://github.com/yazin-yousif/College-GPA-Calculator/" + "\n")
     getUserInput()
-
-init()
