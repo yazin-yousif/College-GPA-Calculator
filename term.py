@@ -94,6 +94,6 @@ class Term(object):
             if (obtainableTotal == 0 or obtainedTotal == 0):
                 print "Your " + self.getName() + " GPA is 0"
             else:
-                print "Your " + self.getName() + " GPA is " + str((obtainedTotal / obtainableTotal) * 4)
+                print "Your " + self.getName() + " GPA is " + str((obtainedTotal * 4) / obtainableTotal)
         return 
         

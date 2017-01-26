@@ -90,7 +90,7 @@ def calculateCumulativeGPA():
         if (obtainableTotal == 0 or obtainedTotal == 0):
             print "Your cumulative GPA is 0"
         else:
-            print "Your cumulative GPA is " + str((obtainedTotal / obtainableTotal) * 4)
+            print "Your cumulative GPA is " + str((obtainedTotal * 4) / obtainableTotal)
             
     else:
         print "ERROR: Your list of terms is currently empty."
