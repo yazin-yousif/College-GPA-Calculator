@@ -2,20 +2,20 @@
 
 ![screenshot](http://i.imgur.com/Hq512rX.png)
 
-##Description:
+## Description:
 _College GPA Calculator_ is Python script which allows the user to calculate their term or cumulative GPA on a scale of 0 to 4. 
 The script is geared towards college students.
 
-###Dependencies:
+### Dependencies:
 The script requires that you have Python 2.7 installed. On Linux, Python may already be part of your distribution or may be available as a package. For Windows and Mac OS, please refer to the Python download page for installers and instructions.
 
-##How to Run:
+## How to Run:
 Simply download the script and invoke the Python interpreter in your terminal or command prompt manually as follows:
 **`python gpacalc.py`**
 
 Upon success, _College GPA Calculator_ will take you to the main instance where you will be prompted for input.
 
-##How to Use:
+## How to Use:
 After being prompted for input, please start by adding a term. To add a term, type **add \<term name\>**. Upon success, you'll get taken to that term's instance (**term name >**) where you can add courses and calculate the GPA for that term. To exit a term, input **[b]ack**. To go back to a term, input **go \<term name\>**. Below is a the full list of commands that _College GPA Calculator_ supports:
 
 
@@ -44,7 +44,7 @@ After being prompted for input, please start by adding a term. To add a term, ty
 
 Please note that none of the commands listed above are case sensitive; however, it's imperative that you follow the proper formatting when providing the script with your input.
 
-##Frequently Asked Questions: 
+## Frequently Asked Questions: 
 
 Q: **Is there a limit to the number of terms or courses I can add?**
 * A: No. You can add many terms and courses as you want.
